@@ -3,6 +3,14 @@ body {
     margin: 0;
     background: #f8f9fa;
 }
+
+#course-title,
+.highlight {
+  display: inline;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
 header {
     background: #204070;
     color: #fff;

@@ -98,6 +98,15 @@ nav ul li a:hover::after,
 nav ul li a:focus::after {
     width: 100%;
 }
+
+nav a:hover {
+  background-color: #444;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+
+
 main {
     max-width: 1200px;
     margin: 2rem auto 0 auto;

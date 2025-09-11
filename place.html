@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uganda profile</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="place.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>UGANDA</h1>
+    </header>
+    
+
+    <main>
+        <section class="hero">
+            <img src="images/downloadoo.webp" alt="frank in Uganda"/>
+
+            <div class="data-box">
+                <div class="title-bar">data</div>
+
+                <ul>
+                    <li><strong>Area:</strong>  587,041 sq km</li>
+                    <li><strong>Population:</strong>  27691018</li>
+                    <li><strong>Capital</strong>  Kampala</li>
+                    <li><strong>Languages</strong>  luganda, swahali</li>
+                     <li><strong>Time zone</strong> EAT</li>
+                    <li><strong>calling code</strong>  +256</li>
+                    <li><strong>Internet TLD</strong>  .mg</li>
+                </ul>
+            </div>
+
+
+            <div class="weather-box">
+                <div class="title-bar">Weather</div>
+                <ul>
+                    <li><strong>TEmperature:</strong> <span id="temp"> 10°C</span></li>
+                    <li><strong>Condition:</strong> Partly Sunny</li>
+                    <li><strong>Wind:</strong>  5 km/h</li>
+                    <li><strong>Wind Chill:</strong> <span id="windchill"> 9.8°C</span></li>
+                </ul>
+                <button id="toggleUnits">Switch to °F</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <span>&copy;<span id="currentyear"></span> Powered By Frank Tech <span class="footer-sep"></span> Uganda </span>
+            <span id="lastmodified"></span>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastmodified').textContent = 'last Modification: ' + document.lastModified;
+    </script>
+</body>
+</html>
+
+
+
+

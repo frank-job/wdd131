@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore a responsive photo album showcasing beautiful Latter-day Saints temples with captions and grid layout." />
+  <meta name="author" content="YAKAN FRANK" />
+  <title>Temple Album</title>
+  <link rel="stylesheet" href="styles/f-temple.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="js files/f-temple.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <nav>
+      <button id="hamburger">&#9776;</button>
+      <div id="nav-links">
+        <a href="#" id="home">Home</a>
+        <a href="#" id="old">Old</a>
+        <a href="#" id="new">New</a>
+        <a href="#" id="large">Large</a>
+        <a href="#" id="small">Small</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Welcome to the Temple Album - Home</h1>
+    <h2>Featured Temples</h2>
+    <section id="temples-container" class="grid"></section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <span>&copy;<span id="currentyear"></span> Powered By Frank Tech <span class="footer-sep"></span> Uganda </span>
+      <span id="lastmodified"></span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    document.getElementById('lastmodified').textContent = 'Last Modification: ' + document.lastModified;
+  </script>
+</body>
+</html>

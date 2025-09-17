@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 :root {
     --red: #d62d20;
     --green: #007e33;
@@ -7,15 +11,18 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+h1::after {
+  content: "🌍";
 }
 
 h1 {
-  font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .title-bar {
-  font-family: 'Lobster', cursive;
+    font-family: 'Lobster', cursive;
 }
 
 
@@ -33,11 +40,12 @@ header {
 }
 
 header {
-  text-align: center;
+    text-align: center;
 }
+
 header svg {
-  display: block;
-  margin: 10px auto;
+    display: block;
+    margin: 10px auto;
 }
 
 
@@ -69,7 +77,7 @@ header h1 {
     background-color: var(--overlay-bg);
     padding: 1rem;
     border-radius: 0.5rem;
-    box-shadow: 0 0 10px rgba(0, 0 ,0 ,0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     max-width: 300px;
 }
 
@@ -122,12 +130,14 @@ footer {
 }
 
 @media (max-width: 600px) {
+
     .data-box,
     .weather-box {
         position: static;
         margin: 1rem 0;
         width: 90%;
     }
+
     .hero {
         flex-direction: column;
         align-items: center;

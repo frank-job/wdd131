@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Confirmation</title>
+  <link rel="stylesheet" href="styles/form.css" />
+</head>
+<body>
+  <header>
+    <h1>Review Submitted</h1>
+  </header>
+
+  <main>
+    <p>Thank you for submitting your product review!</p>
+    <div id="review-count"></div>
+  </main>
+
+  <footer>
+    <p>©2024 YAKAN FRANK <br />
+    UGANDA<br />
+    Last Modification: 02/26/2024 13:56:10</p>
+  </footer>
+
+  <script>
+    let reviewCount = localStorage.getItem("reviewCount");
+    reviewCount = reviewCount ? parseInt(reviewCount) + 1 : 1;
+    localStorage.setItem("reviewCount", reviewCount);
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const display = document.getElementById("review-count");
+      display.textContent = `You have submitted ${reviewCount} review${reviewCount > 1 ? "s" : ""}.`;
+    });
+  </script>
+</body>
+</html>

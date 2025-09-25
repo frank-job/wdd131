@@ -1,0 +1,67 @@
+@media (min-width: 768px) {
+  /* Header and Navigation */
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #navMenu {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-top: 0;
+  }
+
+  .site-title {
+    font-size: 2rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .slider {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .slider figure {
+    flex: 1 1 30%;
+    max-width: 300px;
+  }
+
+  .slider img {
+    max-height: 200px;
+  }
+
+  /* Tour Cards */
+  .tour-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .tour-card {
+    margin-bottom: 0;
+  }
+
+  /* Contact & Review Forms */
+  .contact-form,
+  .review-form {
+    max-width: 700px;
+    margin: 2rem auto;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 1rem;
+    padding: 2rem;
+  }
+}

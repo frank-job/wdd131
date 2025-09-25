@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoExplore Uganda</title>
+  <meta name="description" content="Explore Uganda’s natural wonders with eco-friendly tours that celebrate biodiversity, culture, and conservation." />
+  <meta name="author" content="Yakan Frank" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/larger.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="images/OLC log.jpeg" alt="EcoExplore Uganda Logo" loading="lazy" />
+      </a>
+      <span class="site-title">EcoExplore Uganda</span>
+      <button id="hamburger">&#9776;</button>
+      <ul id="navMenu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="tours.html">Eco Tours</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="slider">
+        <figure>
+          <img src="images/oip2.jpeg" alt="Nile River Forest" loading="lazy" />
+          <figcaption>Nile River Forest – A lush riverside view near the Source of the Nile</figcaption>
+        </figure>
+        <figure>
+          <img src="images/OIP3.jpeg" alt="Mabira Forest Trail" loading="lazy" />
+          <figcaption>Mabira Forest Trail – A serene path through Uganda’s rainforest</figcaption>
+        </figure>
+        <figure>
+          <img src="images/download.webp" alt="Sipi Falls" loading="lazy" />
+          <figcaption>Sipi Falls – Cascading waterfalls in Eastern Uganda’s highlands</figcaption>
+        </figure>
+      </div>
+      <h2>Discover Uganda’s Natural Wonders</h2>
+      <p>Join us in exploring eco-friendly destinations that celebrate biodiversity, culture, and conservation.</p>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <h2>About Us</h2>
+      <p>EcoExplore Uganda is dedicated to promoting sustainable travel experiences that protect nature and empower local communities. Our tours are designed to educate, inspire, and preserve.</p>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights">
+      <h2>Featured Eco Tours</h2>
+      <article>
+        <h3>Source of the Nile Adventure</h3>
+        <p>Kayak, hike, and learn about the ecological significance of the Nile’s origin.</p>
+      </article>
+      <article>
+        <h3>Mabira Forest Walk</h3>
+        <p>Guided nature walks through one of Uganda’s largest rainforests.</p>
+      </article>
+    </section>
+
+    <!-- Review Form Section -->
+    <section class="review-form">
+      <h2>Eco Tour Review</h2>
+      <form id="ecoReviewForm" method="post" action="#">
+        <label for="tour">Tour Name:</label>
+        <select id="tour" name="tour" required>
+          <option value="">Select a Tour...</option>
+          <option value="nile">Source of the Nile Adventure</option>
+          <option value="mabira">Mabira Forest Walk</option>
+          <option value="sipi">Sipi Falls Day Trip</option>
+          <option value="kayaking">Kayaking on the Nile</option>
+          <option value="birdwatching">Birdwatching Safari</option>
+        </select>
+
+        <label for="rating">Overall Rating:</label>
+        <div class="star-rating" id="starRating">
+          <input type="radio" name="rating" id="star5" value="5" />
+          <label for="star5" title="5 stars">★</label>
+          <input type="radio" name="rating" id="star4" value="4" />
+          <label for="star4" title="4 stars">★</label>
+          <input type="radio" name="rating" id="star3" value="3" />
+          <label for="star3" title="3 stars">★</label>
+          <input type="radio" name="rating" id="star2" value="2" />
+          <label for="star2" title="2 stars">★</label>
+          <input type="radio" name="rating" id="star1" value="1" />
+          <label for="star1" title="1 star">★</label>
+        </div>
+
+        <fieldset>
+          <legend>Features You Found Useful:</legend>
+          <label><input type="checkbox" name="features" value="durability" /> Durability</label>
+          <label><input type="checkbox" name="features" value="ease" /> Ease of Use</label>
+          <label><input type="checkbox" name="features" value="performance" /> Performance</label>
+          <label><input type="checkbox" name="features" value="design" /> Design</label>
+        </fieldset>
+
+        <label for="comments">Written Review (Optional):</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Share your experience..."></textarea>
+
+        <label for="visitorName">Your Name (Optional):</label>
+        <input type="text" id="visitorName" name="visitorName" />
+
+        <button type="submit">Post Review</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> EcoExplore Uganda <br> <p>powered frank tech</p>
+      
+      | Last Modified: <span id="lastModified"></span></p>
+    <p><a href="references.html">Image & Content References</a></p>
+  </footer>
+</body>
+</html>

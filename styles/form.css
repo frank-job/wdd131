@@ -209,3 +209,7 @@ fieldset.rating legend {
 fieldset.features legend {
   color: #1976d2; /* vibrant blue for checkbox section */
 }
+
+footer {
+  color: #c00606;
+}

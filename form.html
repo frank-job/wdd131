@@ -106,11 +106,16 @@
     </form>
   </main>
 
-  <footer>
-    <p>©2024 YAKAN FRANK <br />
-      UGANDA<br />
-      Last Modification: 02/26/2024 13:56:10</p>
+    <footer>
+    <p>&copy;<span id="currentyear"></span> Yakan Frank | Uganda<br>
+    Last Modified: <span id="lastModified"></span></p>
   </footer>
+
+  <script>
+    // Update footer with current year and last modified date
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
 
   
 </body>

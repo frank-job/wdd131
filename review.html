@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Review Confirmation</title>
-  <link rel="stylesheet" href="styles/form.css" />
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank you for submitting your product review. Your feedback helps us improve.">
+  <meta name="author" content="Yakan Frank">
+  <title>Review Confirmation - Thank You</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
   <header>
-    <h1>Review Submitted</h1>
+    <h1>✓ Review Submitted Successfully</h1>
   </header>
 
   <main>
-    <p>Thank you for submitting your product review!</p>
-    <div id="review-count"></div>
+    <div class="confirmation-message">
+      <p class="thank-you">Thank you for submitting your product review!</p>
+      <p class="feedback">Your feedback is valuable and helps us improve our products and services.</p>
+      <div id="review-count" class="review-counter"></div>
+      <div class="action-links">
+        <a href="form.html" class="btn-primary">Submit Another Review</a>
+        <a href="index.html" class="btn-secondary">Return to Home</a>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p>©2024 YAKAN FRANK <br />
-    UGANDA<br />
-    Last Modification: 02/26/2024 13:56:10</p>
+    <p>&copy;<span id="currentyear"></span> Yakan Frank | Uganda<br>
+    Last Modified: <span id="lastModified"></span></p>
   </footer>
 
   <script>
+    // Update footer dates
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+
+    // localStorage: Track review count
     let reviewCount = localStorage.getItem("reviewCount");
     reviewCount = reviewCount ? parseInt(reviewCount) + 1 : 1;
     localStorage.setItem("reviewCount", reviewCount);
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const display = document.getElementById("review-count");
-      display.textContent = `You have submitted ${reviewCount} review${reviewCount > 1 ? "s" : ""}.`;
-    });
+    // Display review count
+    const display = document.getElementById("review-count");
+    display.textContent = `You have submitted ${reviewCount} review${reviewCount > 1 ? "s" : ""}!`;
   </script>
 </body>
 </html>
